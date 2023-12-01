@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+</head>
+<body>
+<h1>Forms</h1>
+<a href="{url 'result'}"> Click here</a>
+<form action="{% url 'form' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="topic" placeholder="Enter topic"><br>
+    <input type="date" name="date" placeholder="Enter date"><br>
+    <input type="time" name="start_title" placeholder="Enter time"><br>
+    <input type="text" name="classroom" placeholder="classroom"><br>
+    <input type="submit" value="Click me">
+
+</form>
+</body>
+</html>

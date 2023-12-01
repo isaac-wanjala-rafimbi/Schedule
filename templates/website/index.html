@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First</title>
+    <link rel="stylesheet" href="{% static 'website/second.css' %}">
+
+</head>
+<body>
+{% block content %}
+<h1>Welcome Here!...</h1>
+
+
+<p>
+    <ul>
+    {% for name in meetings%}
+        <li> 
+
+                {{ name}}
+
+        </li>
+    {% endfor %}
+</ul>
+</p>
+
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<h2>Result Page</h2>
+
+  <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>Classroom</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in form %}
+            <tr>
+                <td>{{ item.topic }}</td>
+                <td>{{ item.date }}</td>
+                <td>{{ item.start_title }}</td>
+                <td>{{ item.classroom }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+  </table>
+
+</body>
+</html>
